@@ -4,6 +4,8 @@ public class Main{
     Flag f1 = new Flag();
     Flag f2 = new Flag(true);
     Flag f3 = new Flag("Belgium","black,yellow, and red", true );
+    iPhone phone = new iPhone();
+    Flag f4 = new Flag ("Belgium","black,yellow, and red", true, phone );
   
     System.out.println(f1);
     System.out.println(f2);
@@ -17,6 +19,7 @@ public class Main{
     f3.Ccolors();
     f3.setWave(false);
     f3.wind();
+    f4.conversation();
    
   }
 }

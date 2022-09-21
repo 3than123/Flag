@@ -3,6 +3,7 @@ public class Flag {
   private String color;
   private String country;
   private Boolean wave;
+  private iPhone com;
 
   public Flag() {
     color = "blank ";
@@ -10,6 +11,7 @@ public class Flag {
     wave = false;
     
   }
+
 
   public Flag(Boolean yWave){
     this();
@@ -21,10 +23,23 @@ public class Flag {
     wave = yWave;
     country = nCountry;
     color = nColor;
-    
+  }
+
+  public Flag(iPhone phone) {
+    this();
+    com = phone;
+  }
+  
+  public Flag(String nCountry, String nColor, Boolean yWave, iPhone convo) {
+    this(nCountry, nColor, yWave);
+    com = convo;
   }
   public String toString(){
     return "Colors: " + color + " Country: " + country + " Waves: " + wave;
+  }
+
+  public void conversation(){
+    System.out.println("Aidan is " + com + " Ethan about the " + country + " flag and how the colors are" + color );
   }
   public void fold() {
     System.out.println("My contry is " + country + ".");
@@ -44,6 +59,7 @@ public class Flag {
     System.out.println("True or false Flags wave in the wind: " + wave);
     System.out.println("");
   }
+
 
   public String getColor() { return color; }
   public void setColor( String c) { color = c;}
